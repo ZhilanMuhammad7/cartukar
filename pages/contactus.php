@@ -126,7 +126,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </section>
 
 <section class="contact" id="contact">
-  <h1 class="heading"><span>Contact </span>us</h1>
   <div class="row">
     <iframe class="map"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.304324586581!2d107.63261750000001!3d-6.9733772000000025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9afad6fa06f%3A0xd4fc2f579a78668a!2sFakultas%20Ilmu%20Terapan%20Universitas%20Telkom!5e0!3m2!1sid!2sid!4v1734290847299!5m2!1sid!2sid"
