@@ -1,8 +1,7 @@
 <?php
-// Koneksi ke database
 require_once '../configdb.php';
 
-// Proses form saat disubmit
+// Proses form 
 $success = false;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Cegah XSS
@@ -59,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       notif.className = 'success-message';
       notif.textContent = "✅ Pesan berhasil dikirim!";
       document.body.appendChild(notif);
-      setTimeout(() => notif.style.opacity = '1', 100); // Fade in
+      setTimeout(() => notif.style.opacity = '1', 100); 
       setTimeout(() => {
         notif.style.opacity = '0';
-        setTimeout(() => notif.remove(), 300); // Fade out
-      }, 3000); // Tampilkan 3 detik
+        setTimeout(() => notif.remove(), 300);
+      }, 3000); 
     });
   </script>
 <?php endif; ?>
