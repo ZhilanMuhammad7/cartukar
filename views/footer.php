@@ -1,3 +1,22 @@
+<?php
+require_once '../configdb.php'; 
+
+$newsletterSuccess = false;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['newsletter_email'])) {
+    $email = filter_var(trim($_POST['newsletter_email']), FILTER_SANITIZE_EMAIL);
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        try {
+            $stmt = $conn->prepare("INSERT INTO newsletter_subscribers (email) VALUES (:email)");
+            $stmt->bindParam(':email', $email);
+            $newsletterSuccess = $stmt->execute();
+        } catch (PDOException $e) {
+        
+        }
+    }
+}
+?>
+
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-top">
@@ -13,8 +32,15 @@
             <div class="footer-newsletter">
                 <h4>Berlangganan Newsletter Kami</h4>
                 <p>Dapatkan diskon terbaru, promosi & keuntungan eksklusif yang dikirimkan langsung ke email Anda.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Alamat email">
+
+                <?php if ($newsletterSuccess): ?>
+                <div style="background-color: #dff0d8; color: #3c763d; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+                    Terima kasih! Email Anda berhasil didaftarkan.
+                </div>
+                <?php endif; ?>
+
+                <form class="newsletter-form" method="post" action="">
+                    <input type="email" name="newsletter_email" placeholder="Alamat email" required>
                     <button type="submit" class="btn">Kirim</button>
                 </form>
             </div>
@@ -73,8 +99,8 @@
         </div>
     </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../assets/js/home.js"></script>
 </body>
-
 </html>
