@@ -56,7 +56,7 @@
                         <a href="#">Tentang CARTUKAR <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-menu">
                             <a href="#">Tentang Kami</a>
-                            <a href="#">CARTUKAR Certified Lab</a>
+                            <a href="../pages/contactus.php">Contact Us</a>
                             <a href="#">Berita</a>
                         </div>
                     </div>
