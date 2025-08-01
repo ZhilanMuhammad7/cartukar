@@ -202,126 +202,90 @@
 </section>
 <!-- services section end -->
 
-<!-- Featured section start -->
 <section class="featured" id="featured">
   <h1 class="heading"><span>Featured</span> Cars</h1>
-  <div class="swiper featured-slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide box">
-        <img src="../assets/images/merce.png" alt="" />
-        <h3>New model</h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price">$55,000/-</div>
-        <a href="#" class="btn">check out</a>
-      </div>
-      <div class="swiper-slide box">
-        <img src="../assets/images/mk5.png" alt="" />
-        <h3>New model</h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price">$55,000/-</div>
-        <a href="#" class="btn">check out</a>
-      </div>
-      <div class="swiper-slide box">
-        <img src="../assets/images/mk4.png" alt="" />
-        <h3>New model</h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price">$55,000/-</div>
-        <a href="#" class="btn">check out</a>
-      </div>
-      <div class="swiper-slide box">
-        <img src="../assets/images/rx7.png" alt="" />
-        <h3>New model</h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price">$55,000/-</div>
-        <a href="#" class="btn">check out</a>
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
 
   <div class="swiper featured-slider">
     <div class="swiper-wrapper">
+
       <div class="swiper-slide box">
-        <img src="../assets/images/gtr.png" alt="" />
+        <img src="../assets/images/merce.png" alt="Mercedes" />
         <h3>New model</h3>
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
         <div class="price">$55,000/-</div>
         <a href="#" class="btn">check out</a>
       </div>
       <div class="swiper-slide box">
-        <img src="../assets/images/r35.png" alt="" />
+        <img src="../assets/images/mk5.png" alt="Supra MK5" />
         <h3>New model</h3>
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
         <div class="price">$55,000/-</div>
         <a href="#" class="btn">check out</a>
       </div>
       <div class="swiper-slide box">
-        <img src="../assets/images/Audi.png" alt="" />
+        <img src="../assets/images/mk4.png" alt="Supra MK4" />
         <h3>New model</h3>
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
         <div class="price">$55,000/-</div>
         <a href="#" class="btn">check out</a>
       </div>
       <div class="swiper-slide box">
-        <img src="../assets/images/veyron.png" alt="" />
+        <img src="../assets/images/rx7.png" alt="Mazda RX7" />
         <h3>New model</h3>
         <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
         </div>
         <div class="price">$55,000/-</div>
         <a href="#" class="btn">check out</a>
       </div>
+
+      <div class="swiper-slide box">
+        <img src="../assets/images/gtr.png" alt="Nissan GTR" />
+        <h3>New model</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="price">$55,000/-</div>
+        <a href="#" class="btn">check out</a>
+      </div>
+      <div class="swiper-slide box">
+        <img src="../assets/images/r35.png" alt="Nissan R35" />
+        <h3>New model</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="price">$55,000/-</div>
+        <a href="#" class="btn">check out</a>
+      </div>
+      <div class="swiper-slide box">
+        <img src="../assets/images/Audi.png" alt="Audi" />
+        <h3>New model</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="price">$55,000/-</div>
+        <a href="#" class="btn">check out</a>
+      </div>
+      <div class="swiper-slide box">
+        <img src="../assets/images/veyron.png" alt="Bugatti Veyron" />
+        <h3>New model</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="price">$55,000/-</div>
+        <a href="#" class="btn">check out</a>
+      </div>
+
     </div>
     <div class="swiper-pagination"></div>
   </div>
 </section>
-<!-- Featured section end -->
 
 <section class="how-it-works">
   <h1 class="heading">Cara Jual & Beli Mobil di <span>CarTukar</span></h1>

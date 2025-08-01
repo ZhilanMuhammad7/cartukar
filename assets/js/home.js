@@ -231,3 +231,96 @@ specTabs.forEach((tab) => {
     }
   });
 });
+// --- Inisialisasi Slider untuk Nilai-Nilai Perusahaan ---
+var swiperNilai = new Swiper(".nilai-slider", {
+  // Konfigurasi slider
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30, // Jarak antar slide
+
+  // Pagination (titik-titik di bawah)
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Pengaturan responsif (jumlah slide per layar)
+  breakpoints: {
+    // Layar HP
+    0: {
+      slidesPerView: 1,
+    },
+    // Layar Tablet
+    768: {
+      slidesPerView: 2,
+    },
+    // Layar Desktop
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+// ====================================================
+// FUNGSI UNTUK FORM VALUASI INTERAKTIF DI HALAMAN JUAL
+// ====================================================
+document.addEventListener("DOMContentLoaded", function () {
+  // Data contoh untuk merek & model. Idealnya ini dari database.
+  const carData = {
+    toyota: ["Avanza", "Innova", "Rush", "Fortuner", "Calya", "Raize"],
+    honda: ["Brio", "HR-V", "CR-V", "Jazz", "Mobilio", "Civic"],
+    suzuki: ["Ertiga", "XL7", "Carry", "Ignis"],
+    daihatsu: ["Xenia", "Terios", "Sigra", "Ayla", "Rocky"],
+  };
+
+  // Ambil semua elemen select dari form
+  const merekSelect = document.querySelector(
+    '.valuation-form select[name="merek"]'
+  );
+  const modelSelect = document.querySelector(
+    '.valuation-form select[name="model"]'
+  );
+  const tahunSelect = document.querySelector(
+    '.valuation-form select[name="tahun"]'
+  );
+
+  // Cek apakah kita berada di halaman dengan form ini
+  if (merekSelect && modelSelect && tahunSelect) {
+    // 1. Isi dropdown Merek
+    for (const merek in carData) {
+      const option = document.createElement("option");
+      option.value = merek;
+      // Mengubah 'toyota' menjadi 'Toyota'
+      option.textContent = merek.charAt(0).toUpperCase() + merek.slice(1);
+      merekSelect.appendChild(option);
+    }
+
+    // 2. Isi dropdown Tahun (20 tahun ke belakang)
+    const currentYear = new Date().getFullYear();
+    for (let year = currentYear; year >= currentYear - 20; year--) {
+      const option = document.createElement("option");
+      option.value = year;
+      option.textContent = year;
+      tahunSelect.appendChild(option);
+    }
+
+    // 3. Buat event saat dropdown Merek dipilih
+    merekSelect.addEventListener("change", function () {
+      const selectedMerek = this.value;
+      const models = carData[selectedMerek] || [];
+
+      // Aktifkan dan kosongkan dulu pilihan model
+      modelSelect.disabled = false;
+      modelSelect.innerHTML =
+        '<option value="" disabled selected>Pilih Model</option>';
+
+      // Isi dengan model yang sesuai
+      models.forEach((model) => {
+        const option = document.createElement("option");
+        option.value = model.toLowerCase().replace(/ /g, "-");
+        option.textContent = model;
+        modelSelect.appendChild(option);
+      });
+    });
+  }
+});

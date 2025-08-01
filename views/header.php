@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CarTukar</title>
-    <link rel="icon" type="image/png" href="../assets/images/logo-cartukar.png">
+    <link rel="icon" type="image/png" href="../assets/images/cartukar.png">
     <link rel="stylesheet" href="../assets/css/home.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -43,9 +43,9 @@
                     </div>
 
                     <div class="dropdown">
-                        <a href="index.php?page=jual">Jual Mobil <i class="fas fa-chevron-down"></i></a>
+                        <a href="">Jual Mobil <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-menu">
-                            <a href="#">Jual Mobil</a>
+                            <a href="index.php?page=jual">Jual Mobil</a>
                             <a href="#">Tukar Tambah</a>
                         </div>
                     </div>
@@ -55,8 +55,8 @@
                     <div class="dropdown">
                         <a href="#">Tentang CARTUKAR <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-menu">
-                            <a href="#">Tentang Kami</a>
-                            <a href="../pages/contactus.php">Contact Us</a>
+                            <a href="index.php?page=ourstory">Tentang Kami</a>
+                            <a href="index.php?page=contactus">Contact Us</a>
                             <a href="#">Berita</a>
                         </div>
                     </div>

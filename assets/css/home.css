@@ -26,7 +26,7 @@ html {
   scroll-behavior: smooth;
 }
 section {
-  padding: 2rem 9%;
+  padding: 8rem 9%; /* Jarak atas-bawah diperbesar menjadi 8rem */
 }
 .heading {
   text-align: center;
@@ -427,7 +427,7 @@ section {
   height: 70px;
   margin-bottom: 2rem;
   /* margin: 0 auto 2rem; Dihapus agar tidak ke tengah */
-  background-color: var(--light-yellow);
+  background-color: var(--yellow);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2336,4 +2336,599 @@ input:checked + .custom-radio::after {
 }
 .btn-cancel:hover {
   background-color: #c82333;
+}
+/* ==============================================
+   KONTEN HALAMAN: CONTACT US (FINAL & RAPI)
+   ============================================== */
+.contact-page {
+  padding: 5rem 9%;
+  background-color: #f8f9fa;
+}
+
+/* Style untuk garis bawah di judul */
+.contact-page .heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 4.5rem;
+  color: var(--black);
+  margin-bottom: 3rem;
+}
+.contact-page .heading span {
+  position: relative;
+  z-index: 0;
+}
+.contact-page .heading span::before {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--yellow);
+  clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.contact-box {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e9ecef;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* WADAH BARU: Lingkaran untuk ikon */
+.contact-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+/* Ikon di dalam lingkaran */
+.contact-icon-wrapper i {
+  font-size: 2.8rem;
+  color: var(--black);
+}
+
+.contact-box h3 {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.contact-box p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+.contact-box p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-box a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+.qr-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.qr-code {
+  width: 80px;
+  height: 80px;
+}
+.qr-text p {
+  margin: 0;
+  text-align: left;
+}
+.qr-text p:first-child {
+  font-size: 1.6rem;
+}
+
+.contact-box.long {
+  grid-column: 1 / -1;
+}
+/* ==============================================
+   HALAMAN TENTANG KAMI (FINAL & RAPI)
+   ============================================== */
+
+/* ==============================================
+   STYLING HERO SECTION DENGAN GRADASI & ANIMASI
+   ============================================== */
+.about-hero-gradient {
+  height: 65vh; /* Tinggi section */
+  min-height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 9%;
+  /* Latar belakang gradasi dari biru tua ke sedikit lebih terang */
+  background: linear-gradient(45deg, #130f40, #2c2a5a);
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+/* Animasi untuk Judul */
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* Terapkan animasi */
+  animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+/* Animasi untuk Paragraf */
+.hero-content p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 400;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0; /* Mulai dari transparan */
+  /* Terapkan animasi dengan sedikit jeda */
+  animation: fadeInSlideUp 1s ease-out 0.3s forwards;
+}
+
+/* Definisi Animasi */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Konten Utama di Bawah Hero */
+.about-us-page {
+  padding: 6rem 0; /* Beri jarak atas-bawah */
+}
+
+/* Section Our Story (Dirapikan) */
+.our-story {
+  padding: 4rem 9%;
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+}
+.story-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.text-content h3 {
+  font-size: 3.2rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.text-content p {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.logo-content {
+  text-align: center;
+}
+.logo-content img {
+  max-width: 180px;
+  opacity: 0.7;
+}
+
+/* Section Visi Misi (Layout 2 Kolom) */
+.visi-misi {
+  background-color: #f8f9fa;
+  padding: 8rem 9%;
+  text-align: center;
+}
+.visi-misi-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.visi-misi .box i {
+  font-size: 4rem;
+  color: var(--yellow);
+  margin-bottom: 2rem;
+}
+.visi-misi h3 {
+  font-size: 2.4rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+.visi-misi p {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ==============================================
+   STYLING BARU: SLIDER UNTUK NILAI-NILAI
+   ============================================== */
+.nilai-nilai {
+  padding: 8rem 9%;
+  background-color: #f8f9fa;
+}
+
+/* Slider Container */
+.nilai-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0 5rem; /* Beri ruang di bawah untuk pagination */
+}
+
+/* Kartu di dalam Slide */
+.nilai-slider .swiper-slide {
+  height: auto; /* Biarkan tinggi menyesuaikan konten */
+}
+
+.nilai-card {
+  background: #fff;
+  padding: 4rem 3rem;
+  border-radius: 1rem;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  height: 100%; /* PENTING: Membuat semua kartu sama tinggi */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nilai-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.nilai-icon {
+  margin-bottom: 2rem;
+}
+.nilai-icon i {
+  font-size: 4rem;
+  color: var(--yellow);
+}
+
+.nilai-card h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Mendorong paragraf ke bawah jika judul pendek */
+}
+
+.nilai-card p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Styling untuk Pagination Dots Swiper */
+.nilai-slider .swiper-pagination {
+  bottom: 1rem; /* Posisi dots */
+}
+.nilai-slider .swiper-pagination-bullet-active {
+  background: var(--yellow);
+}
+
+/* Responsive tambahan */
+@media (max-width: 768px) {
+  .story-content,
+  .visi-misi-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==============================================
+   BAGIAN TIM (OURSTORY.PHP)
+   ============================================== */
+.team-section {
+  padding: 6rem 9%;
+  background-color: #f8f9fa;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+  padding: 3rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-card h3 {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.team-member-card h4 {
+  font-size: 1.4rem;
+  color: var(--yellow);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.team-member-card p {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.team-member-card .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #555;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.team-member-card .social-links a:hover {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+/* ==============================================
+   HALAMAN LANDING "JUAL MOBIL" (FINAL & RAPI)
+   ============================================== */
+
+/* Styling Hero Section Jual Mobil dengan Form Interaktif */
+.sell-hero-v2 {
+  background-color: #f8f9fa;
+  padding: 8rem 9%;
+}
+
+.valuation-form-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  overflow: hidden;
+}
+
+/* Kolom Kiri: Form */
+.valuation-form-left {
+  padding: 4rem;
+}
+.form-header .title-decorator {
+  height: 4px;
+  width: 40px;
+  background-color: var(--yellow);
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+.form-header h2 {
+  font-size: 2.8rem;
+  color: var(--black);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+.form-grid-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.valuation-form select,
+.valuation-form .btn {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
+.valuation-form .btn {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+.form-disclaimer {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Kolom Kanan: Langkah-langkah */
+.valuation-steps-right {
+  background-color: #f0f5ff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.step-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-icon i {
+  font-size: 2.2rem;
+  color: #3b82f6;
+}
+.step-text strong {
+  font-size: 1.6rem;
+  color: var(--black);
+  display: block;
+}
+.step-text span {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .valuation-form-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .form-grid-inputs {
+    grid-template-columns: 1fr;
+  }
+}
+/* Bagian "Pengalaman Penjualan" */
+.sell-experience {
+  padding: 8rem 9%;
+  background-color: #f8f9fa;
+}
+.sell-experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sell-experience .section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.sell-experience .section-header .title-decorator {
+  height: 4px;
+  width: 40px;
+  background-color: var(--yellow);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+.sell-experience .section-header h2 {
+  font-size: 3.5rem;
+  line-height: 1.4;
+  color: var(--black);
+  font-weight: 700;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  text-align: left;
+}
+.step-card {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+.step-number-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 35px;
+  height: 35px;
+  background-color: var(--yellow);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.step-card .step-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2rem;
+  background-color: #fff5d8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.step-card .step-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.step-card h3 {
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.step-card p {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 1.7;
+}
+.sell-experience-footer {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #888;
+  text-align: right;
 }
